@@ -10,6 +10,7 @@ String direccion;
 String telefono;
 
 Estudiante(this.cedula, this.nombre, this.apellido, this.fechaNac, this.direccion, this.telefono);
+
 void cambiarDireccion(String nuevaDireccion) {
     direccion = nuevaDireccion;
   }
