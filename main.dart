@@ -34,6 +34,7 @@ void main() {
   }
 }
 void registrarEstudiante(List<Estudiante> estudiantes) {
+  while (true){ 
   print('\nIngrese la cedula del estudiante:');
   var cedula = stdin.readLineSync()!;
 
@@ -43,8 +44,11 @@ void registrarEstudiante(List<Estudiante> estudiantes) {
   print('Ingrese el apellido del estudiante:');
   var apellido = stdin.readLineSync()!;
 
-  print('Ingrese la fecha de nacimiento (AAAA-MM-DD):');
-  var fechaNac = stdin.readLineSync()!;
+    print('Ingrese la fecha de nacimiento (AAAA-MM-DD):');
+    var fechaNac = stdin.readLineSync()!;
+    
+    
+
 
   print('Ingrese la dirección del estudiante:');
   var direccion = stdin.readLineSync()!;
@@ -59,6 +63,12 @@ void registrarEstudiante(List<Estudiante> estudiantes) {
   estudiantes.add(nuevoEstudiante);
 
   print('Estudiante registrado correctamente.');
+  print('\n¿Desea registrar otro estudiante? (s/n)');
+    var respuesta = stdin.readLineSync()!.toLowerCase();
+    if (respuesta != 's') {
+      break;
+}
+  }
 }
 
 List<double> pedirNotas() {
